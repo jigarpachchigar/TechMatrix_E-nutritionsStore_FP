@@ -1,0 +1,318 @@
+body {
+    color: #434242;
+    font-family: 'PT Sans Caption', sans-serif;
+    margin: 0;
+    color: #727878;
+    background-color: #ffffff;
+    background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #FFF;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.logo_heading {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 36px;
+    font-family: 'helvetica', sans-serif;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    background-color: #0aad25;
+    background-image: linear-gradient(315deg, #0aad25 0%, #29ce44 74%);
+}
+
+header span {
+    font-style: italic;
+    color: #fff;
+    /*color:#727878;*/
+}
+
+nav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* styles for the li in nav */
+
+nav li {
+    list-style-type: none;
+    display: inline;
+}
+
+
+/* Style the topnav links */
+
+nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0
+}
+
+.mySlides {
+    display: none
+}
+
+img {
+    vertical-align: middle;
+}
+
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
+
+
+/* Change color on hover */
+
+nav a:hover {
+    background-color: #0aad25;
+    color: #fff;
+}
+
+.active {
+    background-color: #0aad25;
+    color: #fff;
+}
+
+.clearfix {
+    clear: both;
+    float: left;
+}
+
+.col-content {
+    /* float: left;
+    /*	padding:20px;*/
+    /*width: 70%; */
+    float: inherit;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.col-content p {
+    text-align: justify;
+}
+
+
+footer {
+    clear: both;
+    padding: 5px;
+    color: #ffffff;
+    background-color: #0aad25;
+    background-image: linear-gradient(315deg, #0aad25 0%, #29ce44 74%);
+    text-decoration: none;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.white-section {
+    background: #343233;
+    color: white;
+}
+
+.singletitle {
+    color: #0aad25;
+    font-size: 30px;
+    text-align: center;
+}
+
+.title {
+    color: #0aad25;
+    font-size: 30px;
+    border-bottom: 1px solid #cecaca;
+    margin-left: 20px;
+}
+
+.btn {
+    border: none;
+    padding: 10px;
+    background-color: #0aad25;
+    margin: 500px 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.mt-30 {
+    margin-top: 60px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+/* Set a style for all buttons */
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+/* Extra styles for the cancel button */
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+
+
+/* Set a style for all buttons */
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+/* Extra styles for the cancel button */
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+
+/*@media only screen and (min-width: 688px) {*/
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    /*   #container {
+  width: 85%;
+}*/
+    .logo_heading {
+        margin-top: 0;
+        margin-bottom: 5px;
+        font-weight: 700;
+        font-size: 25px;
+    }
+    header span {
+        font-size: 13px;
+    }
+    nav li {
+        display: block;
+    }
+    nav li a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .col-content {
+        float: left;
+        /* padding: 20px; */
+        width: 100%;
+    }
+    .col-sidebar {
+        width: 100%;
+    }
+    .col-30 {
+        width: 100%;
+    }
+    .col-40 {
+        width: 100%;
+    }
+    .col-50 {
+        width: 100%;
+    }
+    .col-content img {
+        width: 80%;
+    }
+    .col-content p {
+        padding: 10px 20px;
+        font-size: 13.5px;
+    }
+    .title {
+        color: #0aad25;
+        font-size: 22px;
+        border-bottom: 1px solid #F3EFE0;
+        margin-left: 20px;
+    }
+
+    .sidebar-title {
+        color: #0aad25;
+        font-size: 20px;
+        margin-left: 20px;
+        margin-top: 0px;
+    }
+    footer p {
+        font-size: 13px;
+    }
+}
