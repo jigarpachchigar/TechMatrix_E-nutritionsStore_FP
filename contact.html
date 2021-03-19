@@ -49,6 +49,26 @@
                 </p>
                 <br><br>
                 <br>
+                <div class="col-content">
+                    <div id="id01" class="">
+                        <form class="modal-content animate" action="" method="post" onsubmit="SendQuery()">
+                            <div class="imgcontainer">
+                                <img src="images/img_avatar2.png" alt="Avatar" class="avatar">
+                            </div>
+                            <div class="container">
+                                <label for="name"><b>Name</b></label>
+                                <input type="text" placeholder="Enter Name" name="name" id="name" required>
+                                <label for="Email"><b>Email</b></label>
+                                <input type="email"  placeholder="example@gmail.com" name="email" id="email" required>
+                                <label for="phone"><b>Phone</b></label>
+                                <input type="text"  placeholder="Phone Number" name="phone" id="phone" required>
+                                <label for="subject"><b>Subject</b></label>
+                                <input type="text"  placeholder="Subject" name="subject" id="subject" required>
+                                <button type="submit">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
                 <br>
                 <div class="col-30 text-center">
                     <img src="images/phone.png" width="100px" height="100px">
@@ -85,6 +105,17 @@
     </div>
    
     <script>
+
+        // Get the modal
+        var modal = document.getElementById('id01');
+        // When the user clicks anywhere outside of the modal, close it
+
+        function SendQuery()
+        {
+            
+        }
+
+
         var IsLogin = localStorage.getItem('IsLogin');
         if (typeof IsLogin !== 'undefined' && IsLogin !== null) {
             document.getElementById('showlink').style.display = 'block';

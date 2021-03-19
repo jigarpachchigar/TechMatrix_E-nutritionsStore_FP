@@ -8,11 +8,24 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/content.css" />
     <link href="css/font.css" rel="stylesheet">
+    
     <script>
         var IsLogin = localStorage.getItem('IsLogin');
         if (typeof IsLogin !== 'undefined' && IsLogin !== null) {
             document.getElementsByClassName('hidelink')[0].style.visibility = 'hidden';
             window.location.href = "index.html";
+        }
+
+        function nextStep() {
+        if (document.getElementsByClassName("active").length >= document.getElementsByTagName("li").length) {
+            for (let index = 1; index < document.getElementsByTagName("li").length; index++) {
+            document.getElementsByTagName("li")[index].className = "";
+            }
+        }
+        else {
+            const activeNum = document.getElementsByClassName("active").length;
+            document.getElementsByTagName("li")[activeNum].className += " active";
+        }
         }
     </script>
 </head>
@@ -64,6 +77,22 @@
                         <div class="container" style="background-color:#f1f1f1">
                             <button type="button" onclick="ResetForm()" class="clearAll">Clear All</button>
                         </div>
+
+                        <div class="sbcontainer">
+                            <ul class="progressbar">
+                              <li class="active">Email</li>
+                              <li>Password</li>
+                              <li>Personal URL</li>
+                              <li>Date of Birth</li>
+                              <li>Gender</li>
+                              
+                            </ul>
+                          </div>
+
+                          <div class="sbcontainer">
+                            <div class="button" onclick="nextStep()">Next Step</div>
+                          </div>
+
                     </form>
                 </div>
             </div>
