@@ -167,11 +167,6 @@ nav a:hover {
     color: #fff;
 }
 
-.clearfix {
-    clear: both;
-    float: left;
-}
-
 .col-content {
     /* float: left;
     /*	padding:20px;*/
@@ -183,6 +178,11 @@ nav a:hover {
 
 .col-content p {
     text-align: justify;
+}
+
+.col-sidebar {
+    float: left;
+    width: 30%;
 }
 
 
@@ -224,6 +224,34 @@ footer a:hover {
     margin-left: 20px;
 }
 
+.col-sidebar ul {
+    padding-right: 10px;
+    list-style-position: inside;
+}
+
+.col-sidebar ul li {
+    margin-top: 0px;
+    font-size: 15px;
+    padding: 3px;
+}
+
+.col-sidebar a {
+    text-decoration: none;
+    color: #d8daf7;
+}
+
+.col-sidebar ul li:hover,
+.col-sidebar ula:hover {
+    background-color: #0aad25;
+    color: white;
+}
+
+.col-sidebar a:hover {
+    background-color: #0aad25;
+    color: white;
+}
+
+
 .btn {
     border: none;
     padding: 10px;
@@ -240,6 +268,17 @@ footer a:hover {
 
 .bold {
     font-weight: bold;
+}
+
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 
@@ -266,6 +305,28 @@ button:hover {
     width: auto;
     padding: 10px 18px;
     background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
 }
 
 
