@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/content.css" />
     <link href="css/font.css" rel="stylesheet">
+
+    <script>
+        var IsLogin = localStorage.getItem('IsLogin');
+        if (typeof IsLogin !== 'undefined' && IsLogin !== null) {
+            document.getElementsByClassName('hidelink')[0].style.visibility = 'hidden';
+        }
+    </script>
     
 </head>
 
@@ -40,9 +47,14 @@
                 <li>
                     <a href="contact.html">Contact Us</a>
                 </li>
+
+                <li>
+                    <a href="javascript:void(0)" onclick="Logout()" class="showlink" id="showlink">Logout</a>
+                </li>
                
             </ul>
-           
+           <div class="Username" id="Username">
+            </div>
         </nav>
         <section class="">
             <br>
@@ -156,6 +168,24 @@
                 <a href="mailto:enutritionsstore@gmail.com">enutritionstore@gmail.com </a>
             </p>
         </footer>
+
+
+        <script>
+            var IsLogin = localStorage.getItem('IsLogin');
+            if (typeof IsLogin !== 'undefined' && IsLogin !== null) {
+                document.getElementById('showlink').style.display = 'block';
+                var hidelink = document.getElementsByClassName('hidelink');
+                for (var i = 0; i < hidelink.length; i++) {
+                    hidelink[i].style.display = 'none';
+                }
+                document.getElementById("Username").innerHTML = localStorage.getItem('email');
+            }
+
+            function Logout() {
+                localStorage.removeItem("IsLogin");
+                location.reload(0);
+            }
+        </script>
 
     
 </body>
