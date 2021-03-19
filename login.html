@@ -35,7 +35,7 @@
             <h4 class="title text-center">Login</h4>
             <div class="col-content">
                 <div id="id01" class="">
-                    <form class="modal-content animate" action="" method="post" >
+                    <form class="modal-content animate" action="" method="post" onsubmit="Login()">
                         <div class="imgcontainer">
                             <img src="images/img_avatar2.png" alt="Avatar" class="avatar">
                         </div>
@@ -51,7 +51,6 @@
             </div>
             <div class="clearfix"></div>
         </section>
-        
         <!-- footer of the webpage -->
         <footer>
             <p>
@@ -60,9 +59,41 @@
             </p>
         </footer>
     </div>
-   
-   
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+        // When the user clicks anywhere outside of the modal, close it
 
+        function Login() {
+            var email = document.getElementById("email").value;
+            var StoageEmail = localStorage.getItem('email');
+            var Password = document.getElementById("Password").value;
+            var StoagePassword = localStorage.getItem('Password');
+            if (typeof StoageEmail !== 'undefined' && StoageEmail !== null) {
+                if (email == StoageEmail) {
+                    if (typeof StoagePassword !== 'undefined' && StoagePassword !== null) {
+                        if (Password == StoagePassword) {
+                            //login successful
+                            localStorage.setItem("IsLogin", "Yes");
+                        } else {
+                            alert("Please enter correct password");
+                        }
+                    } else {
+                        alert("Please enter correct creentials");
+                    }
+                } else {
+                    alert("Please enter correct creentials");
+                }
+            } else {
+                alert("You are not registered with system");
+            }
+        }
+        var IsLogin = localStorage.getItem('IsLogin');
+        if (typeof IsLogin !== 'undefined' && IsLogin !== null) {
+            document.getElementsByClassName('hidelink')[0].style.visibility = 'hidden';
+            window.location.href = "index.html";
+        }
+    </script>
 </body>
 
 </html>
