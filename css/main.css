@@ -93,54 +93,6 @@ img {
     vertical-align: middle;
 }
 
-/* The dots/bullets/indicators */
-
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active,
-.dot:hover {
-    background-color: #717171;
-}
-
-/* Fading animation */
-
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-.mainsection {
-    min-height: 750px;
-}
-
-@-webkit-keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
-}
-
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
-}
 
 /* Slideshow container */
 
@@ -185,6 +137,82 @@ img {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+
+/* Caption text */
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+
+/* Fading animation */
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.mainsection {
+    min-height: 750px;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
 /* On smaller screens, decrease text size */
 
 @media only screen and (max-width: 300px) {
@@ -208,6 +236,11 @@ nav a:hover {
     color: #fff;
 }
 
+.clearfix {
+    clear: both;
+    float: left;
+}
+
 .col-content {
     /* float: left;
     /*	padding:20px;*/
@@ -226,6 +259,14 @@ nav a:hover {
     width: 30%;
 }
 
+.profile-pic {
+    width: 200%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid #F3EFE0;
+    margin-right: 20px;
+    margin-left: 20px;
+}
 
 footer {
     clear: both;
@@ -265,6 +306,13 @@ footer a:hover {
     margin-left: 20px;
 }
 
+.sidebar-title {
+    color: #0aad25;
+    font-size: 24px;
+    margin-left: 30px;
+    margin-bottom: 0px;
+}
+
 .col-sidebar ul {
     padding-right: 10px;
     list-style-position: inside;
@@ -292,7 +340,6 @@ footer a:hover {
     color: white;
 }
 
-
 .btn {
     border: none;
     padding: 10px;
@@ -302,6 +349,29 @@ footer a:hover {
     text-decoration: none;
 }
 
+.table {
+    margin: 40px 0px 40px 40px;
+    width: 96%;
+    border-collapse: collapse;
+}
+
+.table td {
+    padding: 8px;
+    border: 1px solid #0aad25;
+    font-size: 12px;
+}
+
+.table th {
+    padding: 8px;
+    border: 1px solid #0aad25;
+    background-color: #0aad25;
+    color: white;
+    font-size: 18px;
+}
+
+.table tr:nth-child(even) {
+    background-color: #dddff3ee;
+}
 
 .mt-30 {
     margin-top: 60px;
@@ -310,7 +380,6 @@ footer a:hover {
 .bold {
     font-weight: bold;
 }
-
 
 input[type=text],
 input[type=password] {
@@ -348,6 +417,7 @@ button:hover {
     background-color: #f44336;
 }
 
+
 /* Center the image and position the close button */
 
 .imgcontainer {
@@ -369,6 +439,7 @@ span.psw {
     float: right;
     padding-top: 16px;
 }
+
 
 /* The Modal (background) */
 
@@ -395,7 +466,6 @@ span.psw {
 }
 
 
-
 /* Modal Content/Box */
 
 .modal-content {
@@ -403,8 +473,39 @@ span.psw {
     margin: 5% auto 15% auto;
     /* 5% from the top, 15% from the bottom and centered */
     border: none;
-    width: 60;
+    width: 60%;
     /* Could be more or less, depending on screen size */
+}
+
+
+/* The Close Button (x) */
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+input[type=text],
+input[type=email],
+input[type=date],
+textarea,
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 
@@ -424,6 +525,76 @@ button:hover {
     opacity: 0.8;
 }
 
+
+/* Extra styles for the cancel button */
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+
+/* Center the image and position the close button */
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: none;
+    width: 60;
+    /* Could be more or less, depending on screen size */
+}
+
+
 /* The Close Button (x) */
 
 .close {
@@ -440,6 +611,8 @@ button:hover {
     color: red;
     cursor: pointer;
 }
+
+
 
 /* Add Zoom Animation */
 
@@ -464,14 +637,6 @@ button:hover {
     to {
         transform: scale(1)
     }
-}
-
-/* Extra styles for the cancel button */
-
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
 }
 
 
@@ -529,7 +694,30 @@ button:hover {
         border-bottom: 1px solid #F3EFE0;
         margin-left: 20px;
     }
-
+    .table {
+        margin: 40px 0px 40px 2px;
+        width: 98%;
+        border-collapse: collapse;
+    }
+    .table td {
+        padding: 8px;
+        border: 1px solid #0aad25;
+    }
+    .table th {
+        padding: 8px;
+        border: 1px solid #0aad25;
+        background-color: #0aad25;
+        color: white;
+        font-size: 20px;
+    }
+    .table td {
+        font-size: 13px;
+    }
+    .col-sidebar {
+        float: left;
+        width: 100%;
+        padding-top: 0px;
+    }
     .sidebar-title {
         color: #0aad25;
         font-size: 20px;
