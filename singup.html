@@ -228,6 +228,16 @@
             }
         }
 
+        function move(percentage) {
+            var elem = document.getElementById("myBar");
+            var id = setInterval(frame(percentage), 10);
+
+            function frame(percentage) {
+                elem.style.width = percentage + "%";
+                elem.innerHTML = percentage + "%";
+            }
+        }
+        
         function ResetForm() {
             document.getElementById("register").reset();
         }
