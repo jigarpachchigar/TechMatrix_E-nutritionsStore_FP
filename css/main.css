@@ -210,6 +210,10 @@ img {
     color: white;
 }
 
+label {
+    float: left;
+}
+
 @-webkit-keyframes fade {
     from {
         opacity: .4

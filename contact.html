@@ -15,7 +15,7 @@
             document.getElementsByClassName('hidelink')[0].style.visibility = 'hidden';
         }
     </script>
-  
+
 </head>
 
 <body>
@@ -57,13 +57,15 @@
                             </div>
                             <div class="container">
                                 <label for="name"><b>Name</b></label>
-                                <input autocorrect="off" autocomplete="off" autocapitalize="off" type="text" placeholder="Enter Name" name="name" id="name" required>
+                                <input type="text" placeholder="Enter Name" name="name" id="name" required>
                                 <label for="Email"><b>Email</b></label>
-                                <input autocorrect="off" autocomplete="off" autocapitalize="off" type="email"  placeholder="example@gmail.com" name="email" id="email" required>
+                                <input type="email" placeholder="example@gmail.com" name="email" id="email" required>
                                 <label for="phone"><b>Phone</b></label>
-                                <input autocorrect="off" autocomplete="off" autocapitalize="off" type="text"  placeholder="Phone Number" name="phone" id="phone" required>
+                                <input type="text" placeholder="Phone Number" name="phone" id="phone" required>
                                 <label for="subject"><b>Subject</b></label>
-                                <input autocorrect="off" autocomplete="off" autocapitalize="off" type="text"  placeholder="Subject" name="subject" id="subject" required>
+                                <input type="text" placeholder="Subject" name="subject" id="subject" required>
+                                <label for="MessageBox"><b>Message</b></label>
+                                <textarea name="MessageBox" id="MessageBox" required></textarea>
                                 <button type="submit">Send</button>
                             </div>
                         </form>
@@ -94,12 +96,6 @@
         </section>
         <br>
 
-        <center>  <audio autoplay controls >
-            <source src="media/thank_you.mp3" type="audio/mp3" />
-            <p>Sorry ! Your browser does not support the audio</p>
-          </audio></center>
-      
-
         <!-- footer of the webpage -->
         <br>
         <footer>
@@ -109,17 +105,15 @@
             </p>
         </footer>
     </div>
-   
-    <script>
 
+    <script>
         // Get the modal
         var modal = document.getElementById('id01');
         // When the user clicks anywhere outside of the modal, close it
 
-        // function SendQuery()
-        // {
-            
-        // }
+        function SendQuery() {
+            alert("Your inquiry submitted successfully!");
+        }
 
 
         var IsLogin = localStorage.getItem('IsLogin');
@@ -138,7 +132,7 @@
             location.reload(0);
         }
     </script>
-    
+
 </body>
 
 </html>
