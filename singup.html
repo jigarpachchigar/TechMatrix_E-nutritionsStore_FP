@@ -161,7 +161,31 @@
                     document.getElementById("hemail").value = 0;
                 }
             }
-            
+            else if (id == "Password") {
+                if (document.getElementById("Password").value != "" && Password == 0) {
+                    Percentage += 20;
+                    document.getElementById("Percentage").value = Percentage;
+                    move(Percentage);
+                    document.getElementById("hPassword").value = 1;
+                } else if (document.getElementById("Password").value == "" && Password == 1) {
+                    Percentage -= 20;
+                    document.getElementById("Percentage").value = Percentage;
+                    move(Percentage);
+                    document.getElementById("hPassword").value = 0;
+                }
+            } else if (id == "URL") {
+                if (document.getElementById("URL").value != "" && URL == 0) {
+                    Percentage += 20;
+                    document.getElementById("Percentage").value = Percentage;
+                    move(Percentage);
+                    document.getElementById("hURL").value = 1;
+                } else if (document.getElementById("URL").value == "" && URL == 1) {
+                    Percentage -= 20;
+                    document.getElementById("Percentage").value = Percentage;
+                    move(Percentage);
+                    document.getElementById("hURL").value = 0;
+                }
+            }
         }
 
         function ResetForm() {
