@@ -194,6 +194,22 @@ img {
     min-height: 750px;
 }
 
+#myProgress {
+    width: 100%;
+    background-color: grey;
+}
+
+#myBar {
+    width: 0%;
+    height: 30px;
+    background-color: #4caf50;
+    text-align: center;
+    /* To center it horizontally (if you want) */
+    line-height: 30px;
+    /* To center it vertically */
+    color: white;
+}
+
 @-webkit-keyframes fade {
     from {
         opacity: .4
