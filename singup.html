@@ -3,14 +3,12 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"  />
-    <meta name="format-detection" content="telephone=no">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Signup</title>
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/content.css" />
     <link href="css/font.css" rel="stylesheet">
-    
+
     <script>
         var IsLogin = localStorage.getItem('IsLogin');
         if (typeof IsLogin !== 'undefined' && IsLogin !== null) {
@@ -19,15 +17,14 @@
         }
 
         function nextStep() {
-        if (document.getElementsByClassName("active").length >= document.getElementsByTagName("li").length) {
-            for (let index = 1; index < document.getElementsByTagName("li").length; index++) {
-            document.getElementsByTagName("li")[index].className = "";
+            if (document.getElementsByClassName("active").length >= document.getElementsByTagName("li").length) {
+                for (let index = 1; index < document.getElementsByTagName("li").length; index++) {
+                    document.getElementsByTagName("li")[index].className = "";
+                }
+            } else {
+                const activeNum = document.getElementsByClassName("active").length;
+                document.getElementsByTagName("li")[activeNum].className += " active";
             }
-        }
-        else {
-            const activeNum = document.getElementsByClassName("active").length;
-            document.getElementsByTagName("li")[activeNum].className += " active";
-        }
         }
     </script>
 </head>
@@ -56,6 +53,16 @@
             <h4 class="title text-center">Singup</h4>
             <div class="col-content">
                 <div id="id01" class="">
+                    <div id="myProgress">
+                        <div id="myBar"></div>
+                        <input type="hidden" id="Percentage" value="0">
+                        <input type="hidden" id="hemail" value="0">
+                        <input type="hidden" id="hPassword" value="0">
+                        <input type="hidden" id="hURL" value="0">
+                        <input type="hidden" id="hDOB" value="0">
+                        <input type="hidden" id="hgender" value="0">
+                        <input type="hidden" id="hCommentBox" value="0">
+                    </div>
                     <form class="modal-content animate" id="register" name="register" action="" method="post" onsubmit="Registration()">
                         <div class="imgcontainer">
                             <img src="images/img_avatar2.png" alt="Avatar" class="avatar">
@@ -81,11 +88,12 @@
                         </div>
 
                     </form>
+
                 </div>
 
             </div>
 
-         
+
             <div class="clearfix"></div>
         </section>
         <!-- footer of the webpage -->
@@ -103,7 +111,7 @@
         // When the user clicks anywhere outside of the modal, close it
 
         function Registration() {
-            
+
             var email = document.getElementById("email").value;
             var StoageEmail = localStorage.getItem('email');
             var Password = document.getElementById("Password").value;
@@ -147,7 +155,6 @@
             var DOB = document.getElementById("hDOB").value;
             var gender = document.getElementById("hgender").value;
             var CommentBox = document.getElementById("hCommentBox").value;
-
             if (id == "email") {
                 if (document.getElementById("email").value != "" && email == 0) {
                     Percentage += 20;
@@ -160,8 +167,7 @@
                     move(Percentage);
                     document.getElementById("hemail").value = 0;
                 }
-            }
-            else if (id == "Password") {
+            } else if (id == "Password") {
                 if (document.getElementById("Password").value != "" && Password == 0) {
                     Percentage += 20;
                     document.getElementById("Percentage").value = Percentage;
@@ -185,8 +191,7 @@
                     move(Percentage);
                     document.getElementById("hURL").value = 0;
                 }
-            }
-            else if (id == "DOB") {
+            } else if (id == "DOB") {
                 if (document.getElementById("DOB").value != "" && DOB == 0) {
                     Percentage += 20;
                     document.getElementById("Percentage").value = Percentage;
@@ -198,8 +203,7 @@
                     move(Percentage);
                     document.getElementById("hDOB").value = 0;
                 }
-            }
-            else if (id == "gender") {
+            } else if (id == "gender") {
                 var genderv = document.querySelector('input[name=gender]:checked').value;
                 if (genderv != "" && gender == 0) {
                     Percentage += 20;
@@ -212,8 +216,7 @@
                     move(Percentage);
                     document.getElementById("hgender").value = 0;
                 }
-            }
-            else if (id == "CommentBox") {
+            } else if (id == "CommentBox") {
                 if (document.getElementById("CommentBox").value != "" && CommentBox == 0) {
                     Percentage += 20;
                     document.getElementById("Percentage").value = Percentage;
@@ -237,7 +240,7 @@
                 elem.innerHTML = percentage + "%";
             }
         }
-        
+
         function ResetForm() {
             document.getElementById("register").reset();
         }
