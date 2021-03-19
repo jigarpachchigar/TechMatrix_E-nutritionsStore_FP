@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/content.css" />
+    <link href="css/font.css" rel="stylesheet">
+    <script>
+        var IsLogin = localStorage.getItem('IsLogin');
+        if (typeof IsLogin !== 'undefined' && IsLogin !== null) {
+            document.getElementsByClassName('hidelink')[0].style.visibility = 'hidden';
+            window.location.href = "index.html";
+        }
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <img src="images/sitelogo.png" align="left">
+            <h1 class="logo_heading">E-nutritions Store</h1>
+            <span>Nutritions and Supplemental Store</span>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a class="hidelink" href="login.html">Login</a></li>
+                <li><a class="hidelink" href="singup.html">Signup</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <section class="mainsection">
+            <div class="clearfix">
+                <a href="index.html" class="btn">Back</a>
+            </div>
+            <h4 class="title text-center">Singup</h4>
+            <div class="col-content">
+                <div id="id01" class="">
+                    <form class="modal-content animate" id="register" name="register" action="" method="post" onsubmit="Registration()">
+                        <div class="imgcontainer">
+                            <img src="images/img_avatar2.png" alt="Avatar" class="avatar">
+                        </div>
+                        <div class="container">
+                            <label for="email"><b>Email</b></label>
+                            <input type="email" placeholder="example@gmail.com" name="email" id="email" required>
+                            <label for="Password"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="Password" id="Password" required>
+                            <label for="URL"><b>Personal URL</b></label>
+                            <input type="text" placeholder="www.google.com" name="URL" id="URL" required>
+                            <label for="DOB"><b>Date of Birth</b></label>
+                            <input type="date" placeholder="DOB" name="DOB" id="DOB" required>
+                            <label for="URL"><b>Gender</b></label>
+                            <input type="radio" name="gender" checked value="Male"> Male
+                            <input type="radio" name="gender" value="Female"> Female<br>
+                            <label for="CommentBox"><b>Comment box</b></label>
+                            <textarea name="CommentBox" id="CommentBox" required></textarea>
+                            <button type="submit">Signup</button>
+                        </div>
+                        <div class="container" style="background-color:#f1f1f1">
+                            <button type="button" onclick="ResetForm()" class="clearAll">Clear All</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </section>
+        <!-- footer of the webpage -->
+        <footer>
+            <p>
+                Copyright &copy; 2021. All rights reserved.
+                <a href="mailto:enutritionsstore@gmail.com">enutritionstore@gmail.com </a>
+            </p>
+        </footer>
+    </div>
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+        // When the user clicks anywhere outside of the modal, close it
+
+
+        function Registration() {
+            var email = document.getElementById("email").value;
+            var StoageEmail = localStorage.getItem('email');
+            var Password = document.getElementById("Password").value;
+            //alert(Password);
+            var URL = document.getElementById("URL").value;
+            //alert(URL);
+            var DOB = document.getElementById("DOB").value;
+            //alert(DOB);
+            var gender = document.querySelector('input[name=gender]:checked').value;
+            //alert(gender);
+            var CommentBox = document.getElementById("CommentBox").value;
+            //alert(CommentBox);
+            if (typeof StoageEmail !== 'undefined' && StoageEmail !== null) {
+                if (email != StoageEmail) {
+                    localStorage.setItem("email", email);
+                    localStorage.setItem("Password", Password);
+                    localStorage.setItem("URL", URL);
+                    localStorage.setItem("DOB", DOB);
+                    localStorage.setItem("CommentBox", CommentBox);
+                    alert("You are registerd succefully");
+                    //window.location.href = "login.html";
+                } else {
+                    alert("You are already registered with the system");
+                }
+            } else {
+                localStorage.setItem("email", email);
+                localStorage.setItem("Password", Password);
+                localStorage.setItem("URL", URL);
+                localStorage.setItem("DOB", DOB);
+                localStorage.setItem("CommentBox", CommentBox);
+                alert("You are registerd succefully");
+                //window.location.href = "login.html";
+            }
+        }
+
+        function ResetForm() {
+            document.getElementById("register").reset();
+        }
+    </script>
+</body>
+
+</html>
