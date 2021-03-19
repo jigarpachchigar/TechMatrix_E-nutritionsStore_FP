@@ -199,6 +199,21 @@
                     document.getElementById("hDOB").value = 0;
                 }
             }
+            else if (id == "gender") {
+                var genderv = document.querySelector('input[name=gender]:checked').value;
+                if (genderv != "" && gender == 0) {
+                    Percentage += 20;
+                    document.getElementById("Percentage").value = Percentage;
+                    move(Percentage);
+                    document.getElementById("hgender").value = 1;
+                } else if (genderv == "" && gender == 1) {
+                    Percentage -= 20;
+                    document.getElementById("Percentage").value = Percentage;
+                    move(Percentage);
+                    document.getElementById("hgender").value = 0;
+                }
+            }
+            
         }
 
         function ResetForm() {
