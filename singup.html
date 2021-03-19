@@ -62,18 +62,18 @@
                         </div>
                         <div class="container">
                             <label for="email"><b>Email</b></label>
-                            <input type="email" placeholder="example@gmail.com" name="email" id="email" required>
+                            <input type="email" placeholder="example@gmail.com" name="email" onfocusout="Progress('email')" id="email" required>
                             <label for="Password"><b>Password</b></label>
-                            <input type="password" placeholder="Enter Password" name="Password" id="Password" required>
+                            <input type="password" placeholder="Enter Password" onfocusout="Progress('Password')" name="Password" id="Password" required>
                             <label for="URL"><b>Personal URL</b></label>
-                            <input type="text" placeholder="www.google.com" name="URL" id="URL" required>
+                            <input type="text" placeholder="www.google.com" name="URL" id="URL" onfocusout="Progress('URL')" required>
                             <label for="DOB"><b>Date of Birth</b></label>
-                            <input type="date" placeholder="DOB" name="DOB" id="DOB" required>
+                            <input type="date" placeholder="DOB" name="DOB" onfocusout="Progress('DOB')" id="DOB" required>
                             <label for="URL"><b>Gender</b></label>
-                            <input type="radio" name="gender" checked value="Male"> Male
-                            <input type="radio" name="gender" value="Female"> Female<br>
+                            <input type="radio" name="gender" checked onfocusout="Progress('gender')" value="Male"> Male
+                            <input type="radio" name="gender" onfocusout="Progress('gender')" value="Female"> Female<br>
                             <label for="CommentBox"><b>Comment box</b></label>
-                            <textarea name="CommentBox" id="CommentBox" required></textarea>
+                            <textarea name="CommentBox" id="CommentBox" onfocusout="Progress('gender')" required></textarea>
                             <button type="submit">Signup</button>
                         </div>
                         <div class="container" style="background-color:#f1f1f1">
