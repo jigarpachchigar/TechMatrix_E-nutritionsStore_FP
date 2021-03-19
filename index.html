@@ -26,6 +26,7 @@
                 <li><a href="javascript:void(0)" onclick="Logout()" class="showlink" id="showlink">Logout</a></li>
             </ul>
             <div class="Username" id="Username"></div>
+            
         </nav>
        
         <section>
@@ -94,6 +95,21 @@
             }
             slides[slideIndex - 1].style.display = "block";
             //dots[slideIndex - 1].className += " active";
+            var IsLogin = localStorage.getItem('IsLogin');
+        if (typeof IsLogin !== 'undefined' && IsLogin !== null) {
+            document.getElementById('showlink').style.display = 'block';
+            var hidelink = document.getElementsByClassName('hidelink');
+            for (var i = 0; i < hidelink.length; i++) {
+                hidelink[i].style.display = 'none';
+            }
+            document.getElementById("Username").innerHTML = localStorage.getItem('email');
+        }
+
+        function Logout() {
+            localStorage.removeItem("IsLogin");
+            location.reload(0);
+        }
+
         }
         </script>
     
